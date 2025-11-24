@@ -1,6 +1,7 @@
 const app = Vue.createApp({
   data: function () {
     return {
+      cart: 0,
       product: "Socks",
       image: "./assets/images/socks_green.jpg",
       inStock: true,
@@ -10,5 +11,14 @@ const app = Vue.createApp({
         { id: 2235, color: "blue", image: "./assets/images/socks_blue.jpg" },
       ],
     };
+  },
+
+  methods: {
+    addToCart() {
+      this.cart += 1;
+    },
+    updateImage(variantImage) {
+      this.image = variantImage;
+    },
   },
 });
