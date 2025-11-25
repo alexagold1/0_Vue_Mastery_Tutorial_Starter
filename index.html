@@ -20,6 +20,8 @@
       <div class="product-container">
         <div class="product-image">
           <img v-bind:src="image" />
+        </div>
+        <div class="product-info">
           <h1>{{ title }}</h1>
           <p v-if="inStock"> In Stock</p>
           <p v-else> Out of Stock</p>
@@ -34,14 +36,14 @@
         </div>
       </div>
     </div>
+  </div>
+  <!-- Import Js -->
+  <script src="./main.js"></script>
 
-    <!-- Import Js -->
-    <script src="./main.js"></script>
-
-    <!-- Mount App -->
-    <script>
-      const mountedApp = app.mount('#app');
-    </script>
+  <!-- Mount App -->
+  <script>
+    const mountedApp = app.mount('#app');
+  </script>
 </body>
 
 </html>
